@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/live2d/css/live2d.css">
+    <script src="/js/Valine.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="INF">
+    
+    
+    
+    
+    
+    
+    <title>Linux QT程序打包 | INF</title>
+    <link href="”https://0xfg.top“" rel="”prefetch”">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="/js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: 'LhQd7TU1s10PMNM6fsLlbm7d-gzGzoHsz',
+        appKey: 'apEaSYzkWlvq1AujbdYfORd2'
+      })
+    </script>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/https:/infinitelyfreedom.gitee.io/imgs/avatar.gif'
+        var previews = 'https://infinitelyfreedom.gitee.io/imgs/preview/preview1.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview2.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview3.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview4.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview5.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview6.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview7.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview8.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview9.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview10.jpg,https://infinitelyfreedom.gitee.io/imgs/preview/preview11.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+</head></html>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>a</span></li>
+        <li><span>b</span></li>
+        <li><span>c</span></li>
+        <li><span>d</span></li>
+        <li><span>e</span></li>
+        <li><span>f</span></li>
+        <li><span>g</span></li>
+        <li><span>h</span></li>
+        <li><span>i</span></li>
+        <li><span>j</span></li>
+        <li><span>k</span></li>
+        <li><span>l</span></li>
+        <li><span>13</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="https://0xfg.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse" aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://0xfg.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">INF</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class>
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class>
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/Access/">Access</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/博客/">博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/QT/">QT</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/注入/">注入</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/踩坑记/">踩坑记</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/Linux/">Linux</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class>
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://0xfg.top">INF</a>
+        >
+        <span>Linux QT程序打包</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2019/07/05/LinuxQT/">Linux QT程序打包</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Linux/">Linux</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-07-05
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2019/07/05/LinuxQT/">Linux QT程序打包</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-07-05
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Linux/">Linux</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2><font color="red"> //linuxdeployqt下载(程序依赖) </font><h2>
+
+<p><a href="https://github.com/probonopd/linuxdeployqt/releases" target="_blank" rel="noopener">https://github.com/probonopd/linuxdeployqt/releases</a></p>
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt1.jpg" alt></p>
+<h2><font color="red"> //AppImage(程序打包) </font><h2>
+
+<p><a href="https://github.com/AppImage/AppImageKit/releases" target="_blank" rel="noopener">https://github.com/AppImage/AppImageKit/releases</a></p>
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt2.jpg" alt></p>
+<h4><font color="green">Kali2遇到这种问题,换ubuntu 16.04可运行</font><h4>
+
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt3.jpg" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//配置QT环境变量,填你们的QT路径</span><br><span class="line"></span><br><span class="line">PATH=<span class="string">"<span class="variable">$HOME</span>/bin:<span class="variable">$HOME</span>/.local/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"></span><br><span class="line">PATH=/opt/Qt5.12.4/5.12.4/gcc_64/bin/:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">LD_LIBRARY_PATH=/opt/Qt5.12.4/5.12.4/gcc_64/lib/:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">LIBRARY_PATH=/opt/Qt5.12.4/5.12.4/gcc_64/lib/:<span class="variable">$LIBRARY_PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> LIBRARY_PATH</span><br></pre></td></tr></table></figure>
+
+<p>改完可用 . xxxx profile 或者 source xxxx profile更新一下,如果没有更新则可以重新启动一次</p>
+<p>运行qmake -v查看</p>
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt4.jpg" alt></p>
+<h4><font color="green">//QT程序依赖库</font></h4>
+新建文件夹,名字随便,把qt程序复制过来
+
+<p>运行: linuxdeployqt qtappname -appimage</p>
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt5.jpg" alt></p>
+<p>出现错误,没有成功打包</p>
+<h4><font color="green">Xxx.AppImage --appimage-extract    //解压一个appimage文件</font></h4>
+
+<p>appimagetool-x86_64.AppImage 解压后的文件夹 //打包成.AppImage格式运行</p>
+<p>这里我用了appimagetool-x86_64.AppImage,解开这个文件,执行上条命令,得到一个文件夹</p>
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt6.jpg" alt></p>
+<h4><font color="green">目录结构</font></h4>
+squashfs-root/
+
+<p>├── appimagetool.desktop</p>
+<p>├── appimagetool.svg</p>
+<p>├── AppRun</p>
+<p>└── usr</p>
+<p>​    ├── bin</p>
+<p>​    │   ├── appimagetool</p>
+<p>​    │   ├── AppRun</p>
+<p>​    │   ├── desktop-file-validate</p>
+<p>​    │   └── zsyncmake</p>
+<p>​    ├── lib</p>
+<p>​    │   ├── appimagekit</p>
+<p>​    │   │   └── mksquashfs</p>
+<p>​    │   ├── libffi.so.5</p>
+<p>​    │   ├── libgio-2.0.so</p>
+<p>​    │   ├── libgio-2.0.so.0</p>
+<p>​    │   ├── libgio-2.0.so.0.4000.0</p>
+<p>​    │   ├── libglib-2.0.so</p>
+<p>​    │   ├── libglib-2.0.so.0</p>
+<p>​    │   ├── libglib-2.0.so.0.4000.0</p>
+<p>​    │   ├── libgmodule-2.0.so</p>
+<p>​    │   ├── libgmodule-2.0.so.0</p>
+<p>​    │   ├── libgmodule-2.0.so.0.4000.0</p>
+<p>​    │   ├── libgobject-2.0.so</p>
+<p>​    │   ├── libgobject-2.0.so.0</p>
+<p>​    │   ├── libgobject-2.0.so.0.4000.0</p>
+<p>​    │   ├── libgthread-2.0.so</p>
+<p>​    │   ├── libgthread-2.0.so.0</p>
+<p>​    │   └── libgthread-2.0.so.0.4000.0</p>
+<p>​    └── share</p>
+<p>​        ├── applications</p>
+<p>​        │   └── appimagetool.desktop</p>
+<p>​        ├── icons</p>
+<p>​        │   └── hicolor</p>
+<p>​        │       └── scalable</p>
+<p>​        │           └── apps</p>
+<p>​        │               └── appimagetool.svg</p>
+<p>​        └── metainfo</p>
+<p>​            └── appimagetool.appdata.xml</p>
+<p>11 directories, 27 files</p>
+<h4><font color="green">//修改成我们我自己的程序,然后打包</font></h4>
+![](https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt7.jpg)
+
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt8.jpg" alt></p>
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt9.jpg" alt></p>
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt10.jpg" alt></p>
+<h4><font color="green">执行命令打包我们的发布程序</font></h4>
+
+<p>appimagetool-x86_64.AppImage too.AppDir/ test.AppImage</p>
+<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt11.jpg" alt></p>
+<p>完成</p>
+<h4><font color="green">发布程序文件夹目录结构</font></h4>
+
+<p>tree too.AppDir/</p>
+<p>too.AppDir/</p>
+<p>├── appimagetool.desktop</p>
+<p>├── appimagetool.svg</p>
+<p>├── AppRun</p>
+<p>└── usr</p>
+<p>​    ├── bin</p>
+<p>​    │   ├── qt.conf</p>
+<p>​    │   └── untitled</p>
+<p>​    ├── doc</p>
+<p>​    │   ├── libboost-filesystem1.58.0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libboost-system1.58.0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libcapnp-0.5.3</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libdbus-1-3</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libffi6</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libgbm1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libgcrypt20</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libglib2.0-0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── liblzma5</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libmirclient9</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libmircommon7</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libmircore1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libmirprotobuf3</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libpcre3</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libpng12-0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libprotobuf-lite9v5</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libselinux1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libsystemd0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libwayland-client0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libwayland-server0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libx11-xcb1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxau6</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxcb-glx0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxcb-present0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxcb-sync1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxcb-xfixes0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxcb-xkb1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxdamage1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxdmcp6</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxext6</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxfixes3</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxkbcommon0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxkbcommon-x11-0</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxrender1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   ├── libxshmfence1</p>
+<p>​    │   │   └── copyright</p>
+<p>​    │   └── libxxf86vm1</p>
+<p>​    │       └── copyright</p>
+<p>​    ├── lib</p>
+<p>​    │   ├── appimagekit</p>
+<p>​    │   │   └── mksquashfs</p>
+<p>​    │   ├── libboost_filesystem.so.1.58.0</p>
+<p>​    │   ├── libboost_system.so.1.58.0</p>
+<p>​    │   ├── libcapnp-0.5.3.so</p>
+<p>​    │   ├── libdbus-1.so.3</p>
+<p>​    │   ├── libffi.so.5</p>
+<p>​    │   ├── libffi.so.6</p>
+<p>​    │   ├── libgbm.so.1</p>
+<p>​    │   ├── libgcrypt.so.20</p>
+<p>​    │   ├── libgio-2.0.so</p>
+<p>​    │   ├── libgio-2.0.so.0</p>
+<p>​    │   ├── libgio-2.0.so.0.4000.0</p>
+<p>​    │   ├── libglib-2.0.so</p>
+<p>​    │   ├── libglib-2.0.so.0</p>
+<p>​    │   ├── libglib-2.0.so.0.4000.0</p>
+<p>​    │   ├── libgmodule-2.0.so</p>
+<p>​    │   ├── libgmodule-2.0.so.0</p>
+<p>​    │   ├── libgmodule-2.0.so.0.4000.0</p>
+<p>​    │   ├── libgobject-2.0.so</p>
+<p>​    │   ├── libgobject-2.0.so.0</p>
+<p>​    │   ├── libgobject-2.0.so.0.4000.0</p>
+<p>​    │   ├── libgthread-2.0.so</p>
+<p>​    │   ├── libgthread-2.0.so.0</p>
+<p>​    │   ├── libgthread-2.0.so.0.4000.0</p>
+<p>​    │   ├── libicudata.so.56</p>
+<p>​    │   ├── libicui18n.so.56</p>
+<p>​    │   ├── libicuuc.so.56</p>
+<p>​    │   ├── libkj-0.5.3.so</p>
+<p>​    │   ├── liblzma.so.5</p>
+<p>​    │   ├── libmirclient.so.9</p>
+<p>​    │   ├── libmircommon.so.7</p>
+<p>​    │   ├── libmircore.so.1</p>
+<p>​    │   ├── libmirprotobuf.so.3</p>
+<p>​    │   ├── libpcre.so.3</p>
+<p>​    │   ├── libpng12.so.0</p>
+<p>​    │   ├── libprotobuf-lite.so.9</p>
+<p>​    │   ├── libQt5Core.so.5</p>
+<p>​    │   ├── libQt5DBus.so.5</p>
+<p>​    │   ├── libQt5Gui.so.5</p>
+<p>​    │   ├── libQt5Network.so.5</p>
+<p>​    │   ├── libQt5Qml.so.5</p>
+<p>​    │   ├── libQt5Quick.so.5</p>
+<p>​    │   ├── libQt5Svg.so.5</p>
+<p>​    │   ├── libQt5VirtualKeyboard.so.5</p>
+<p>​    │   ├── libQt5Widgets.so.5</p>
+<p>​    │   ├── libQt5XcbQpa.so.5</p>
+<p>​    │   ├── libselinux.so.1</p>
+<p>​    │   ├── libsystemd.so.0</p>
+<p>​    │   ├── libwayland-client.so.0</p>
+<p>​    │   ├── libwayland-server.so.0</p>
+<p>​    │   ├── libX11-xcb.so.1</p>
+<p>​    │   ├── libXau.so.6</p>
+<p>​    │   ├── libxcb-glx.so.0</p>
+<p>​    │   ├── libxcb-present.so.0</p>
+<p>​    │   ├── libxcb-sync.so.1</p>
+<p>​    │   ├── libxcb-xfixes.so.0</p>
+<p>​    │   ├── libxcb-xkb.so.1</p>
+<p>​    │   ├── libXdamage.so.1</p>
+<p>​    │   ├── libXdmcp.so.6</p>
+<p>​    │   ├── libXext.so.6</p>
+<p>​    │   ├── libXfixes.so.3</p>
+<p>​    │   ├── libxkbcommon.so.0</p>
+<p>​    │   ├── libxkbcommon-x11.so.0</p>
+<p>​    │   ├── libXrender.so.1</p>
+<p>​    │   ├── libxshmfence.so.1</p>
+<p>​    │   └── libXxf86vm.so.1</p>
+<p>​    ├── plugins</p>
+<p>​    │   ├── bearer</p>
+<p>​    │   │   ├── libqconnmanbearer.so</p>
+<p>​    │   │   ├── libqgenericbearer.so</p>
+<p>​    │   │   └── libqnmbearer.so</p>
+<p>​    │   ├── iconengines</p>
+<p>​    │   │   └── libqsvgicon.so</p>
+<p>​    │   ├── imageformats</p>
+<p>​    │   │   ├── libqgif.so</p>
+<p>​    │   │   ├── libqicns.so</p>
+<p>​    │   │   ├── libqico.so</p>
+<p>​    │   │   ├── libqjpeg.so</p>
+<p>​    │   │   ├── libqsvg.so</p>
+<p>​    │   │   ├── libqtga.so</p>
+<p>​    │   │   ├── libqtiff.so</p>
+<p>​    │   │   ├── libqwbmp.so</p>
+<p>​    │   │   └── libqwebp.so</p>
+<p>​    │   ├── platforminputcontexts</p>
+<p>​    │   │   ├── libcomposeplatforminputcontextplugin.so</p>
+<p>​    │   │   ├── libibusplatforminputcontextplugin.so</p>
+<p>​    │   │   └── libqtvirtualkeyboardplugin.so</p>
+<p>​    │   ├── platforms</p>
+<p>​    │   │   └── libqxcb.so</p>
+<p>​    │   └── xcbglintegrations</p>
+<p>​    │       ├── libqxcb-egl-integration.so</p>
+<p>​    │       └── libqxcb-glx-integration.so</p>
+<p>​    ├── share</p>
+<p>​    │   ├── applications</p>
+<p>​    │   │   └── appimagetool.desktop</p>
+<p>​    │   ├── icons</p>
+<p>​    │   │   └── hicolor</p>
+<p>​    │   │       └── scalable</p>
+<p>​    │   │           └── apps</p>
+<p>​    │   │               └── appimagetool.svg</p>
+<p>​    │   └── metainfo</p>
+<p>​    │       └── appimagetool.appdata.xml</p>
+<p>​    └── translations</p>
+<p>​        ├── qt_ar.qm</p>
+<p>​        ├── qt_bg.qm</p>
+<p>​        ├── qt_ca.qm</p>
+<p>​        ├── qt_cs.qm</p>
+<p>​        ├── qt_da.qm</p>
+<p>​        ├── qt_de.qm</p>
+<p>​        ├── qt_en.qm</p>
+<p>​        ├── qt_es.qm</p>
+<p>​        ├── qt_fi.qm</p>
+<p>​        ├── qt_fr.qm</p>
+<p>​        ├── qt_gd.qm</p>
+<p>​        ├── qt_he.qm</p>
+<p>​        ├── qt_hu.qm</p>
+<p>​        ├── qt_it.qm</p>
+<p>​        ├── qt_ja.qm</p>
+<p>​        ├── qt_ko.qm</p>
+<p>​        ├── qt_lv.qm</p>
+<p>​        ├── qt_pl.qm</p>
+<p>​        ├── qt_ru.qm</p>
+<p>​        ├── qt_sk.qm</p>
+<p>​        ├── qt_uk.qm</p>
+<p>​        └── qt_zh_TW.qm</p>
+<p>56 directories, 151 files</p>
+<h2><font color="red">//这里模仿了其他appimage应用的目录结构,达成了目的</font></h2></h4></h4></h2></h2></h2></h2>
+    </div>
+    
+  <!-- css -->
+  <style type="text/css">
+      .center {
+          text-align: center;
+      }
+      .hidden {
+          display: none;
+      }
+    .donate_bar a.btn_donate{
+      display: inline-block;
+      width: 82px;
+      height: 82px;
+      background: url("https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/btn_reward.gif") no-repeat;
+      _background: url("https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/btn_reward.gif") no-repeat;
+
+      <!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+           因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+         为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+         嵌入其它博客时不一定要它们。 -->
+      -webkit-transition: background 0s;
+      -moz-transition: background 0s;
+      -o-transition: background 0s;
+      -ms-transition: background 0s;
+      transition: background 0s;
+      <!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 -->
+    }
+
+    .donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+    .donate_bar .donate_txt {
+      display: block;
+      color: #9d9d9d;
+      font: 14px/2 "Microsoft Yahei";
+    }
+    .bold{ font-weight: bold; }
+  </style>
+  <!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+  <!-- btn_donate & tips -->
+  <div id="donate_board" class="donate_bar center">
+      <br>
+      ------------------------------------------------------------------------------------------------------------------------------
+      <br>
+    <a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+    <span class="donate_txt">
+      Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！
+    </span>
+      
+    
+  </div>
+  <!-- /btn_donate & tips -->
+
+  <!-- donate guide -->
+    
+  <div id="donate_guide" class="donate_bar center hidden">
+        <br>
+      ------------------------------------------------------------------------------------------------------------------------------
+      <br>
+
+    <a href="https://infinitelyfreedom.gitee.io/imgs/webchat.jpg" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+      <img src="https://infinitelyfreedom.gitee.io/imgs/webchat.jpg" title="微信打赏 Colin" height="190px" width="360">
+    </a>
+    <!--    
+        &nbsp;&nbsp;
+
+    <a href="" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+      <img src="" title="支付宝打赏 Colin" height="190px" width="360"/>
+    </a> -->
+
+    <span class="donate_txt">
+      Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！
+    </span>
+
+  </div>
+  <!-- /donate guide -->
+
+  <!-- donate script -->
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function() {
+      $('#donate_board').addClass('hidden');
+      $('#donate_guide').removeClass('hidden');
+    }
+
+    function donate_on_web(){
+      $('#donate').submit();
+        }
+
+    var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+    }
+  </script>
+  <!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+   
+</article>
+
+
+<div id="vcomments"></div>
+<script>
+  new Valine({
+  el: '#vcomments',
+  appId: 'LhQd7TU1s10PMNM6fsLlbm7d-gzGzoHsz',
+  appKey: 'apEaSYzkWlvq1AujbdYfORd2',
+  })
+</script>
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get" action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <!-- <i class="fa fa-quote-left"></i> -->
+            INF
+            <!-- <i class="fa fa-quote-right"></i> -->
+        </div>
+        <div class="author-panel text-center">
+            <img src="https://infinitelyfreedom.gitee.io/imgs/avatar.gif" width="140" height="140" alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/08/15/access注入/">Access注入</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/07/05/LinuxQT/">Linux QT程序打包</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/24/FirstBlog/">博客入坑记</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/08/15/access注入/">Access注入</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/24/FirstBlog/">博客入坑记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/07/05/LinuxQT/">Linux QT程序打包</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2019/07/05/LinuxQT/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li class="active">
+                    <a href="/2019/07/05/LinuxQT/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab" aria-expanded="true">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2019/07/05/LinuxQT/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/注入/" style="font-size: 12.785903327112685px;" class="tag-cloud-link">注入</a>
+    
+    <a href="/tags/踩坑记/" style="font-size: 15.305768686160299px;" class="tag-cloud-link">踩坑记</a>
+    
+    <a href="/tags/Linux/" style="font-size: 15.30494100822538px;" class="tag-cloud-link">Linux</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade active in" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://www.shentoushi.top/" target="_blank">渗透师导航</a>
+    </li>
+    
+    <li>
+        <a href="http://www.helloworldhacker.com/" target="_blank">helloworldhacker</a>
+    </li>
+    
+    <li>
+        <a href="http://www.kali2.com/" target="_blank">kali2</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/InfinitelyFreedom/" target="_blank">Github</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 INF Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js" charset="utf-8"></script>
+
+<div id="landlord" style="left:5px;bottom:0px;">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+    	<div class="live_talk_input_name_body">
+        	<input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字">
+        </div>
+        <div class="live_talk_input_text_body">
+        	<input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？">
+            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden">
+    <div class="live_ico_box">
+    	<div class="live_ico_item type_info" id="showInfoBtn"></div>
+    	<div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden">
+        <audio src style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input name="live2dBGM" value="https://t1.aixinxi.net/o_1c52p4qbp15idv6bl55h381moha.mp3" type="hidden">
+        <input name="live2dBGM" value="https://t1.aixinxi.net/o_1c52p8frrlmf1aled1e14m56una.mp3" type="hidden">
+        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
+    </div>
+</div>
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var message_Path = '/live2d/'; //资源目录，如果目录不对请更改
+var talkAPI = "http://openapi.tuling123.com/openapi/api/v2";//如果有类似图灵机器人的聊天接口请填写接口路径
+</script>
+<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/live2d/js/message.js"></script>
+</body>
+<script src="/js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: 'https://infinitelyfreedom.gitee.io/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '13'
+    }
+</script>
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+<script src="/js/oni.js"></script>
+
+
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+<script src="/js/comment/leancloud.js"></script>
+
+
+</html>
