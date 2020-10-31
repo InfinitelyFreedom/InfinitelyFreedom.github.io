@@ -147,15 +147,15 @@
                         
                         
                         <li>
-                            <a href="/categories/Access/">Access</a>
-                        </li>
-                        
-                        <li>
                             <a href="/categories/博客/">博客</a>
                         </li>
                         
                         <li>
                             <a href="/categories/QT/">QT</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/sql注入/">sql注入</a>
                         </li>
                         
                         
@@ -176,15 +176,15 @@
                         
                         
                         <li>
-                            <a href="/tags/注入/">注入</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/踩坑记/">踩坑记</a>
+                            <a href="/tags/博客/">博客</a>
                         </li>
                         
                         <li>
                             <a href="/tags/Linux/">Linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/注入/">注入</a>
                         </li>
                         
                         
@@ -272,30 +272,30 @@
         <h2><font color="red"> //linuxdeployqt下载(程序依赖) </font><h2>
 
 <p><a href="https://github.com/probonopd/linuxdeployqt/releases" target="_blank" rel="noopener">https://github.com/probonopd/linuxdeployqt/releases</a></p>
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt1.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt1.jpg" alt></p>
 <h2><font color="red"> //AppImage(程序打包) </font><h2>
 
 <p><a href="https://github.com/AppImage/AppImageKit/releases" target="_blank" rel="noopener">https://github.com/AppImage/AppImageKit/releases</a></p>
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt2.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt2.jpg" alt></p>
 <h4><font color="green">Kali2遇到这种问题,换ubuntu 16.04可运行</font><h4>
 
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt3.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt3.jpg" alt></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//配置QT环境变量,填你们的QT路径</span><br><span class="line"></span><br><span class="line">PATH=<span class="string">"<span class="variable">$HOME</span>/bin:<span class="variable">$HOME</span>/.local/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"></span><br><span class="line">PATH=/opt/Qt5.12.4/5.12.4/gcc_64/bin/:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">LD_LIBRARY_PATH=/opt/Qt5.12.4/5.12.4/gcc_64/lib/:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">LIBRARY_PATH=/opt/Qt5.12.4/5.12.4/gcc_64/lib/:<span class="variable">$LIBRARY_PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> LIBRARY_PATH</span><br></pre></td></tr></table></figure>
 
 <p>改完可用 . xxxx profile 或者 source xxxx profile更新一下,如果没有更新则可以重新启动一次</p>
 <p>运行qmake -v查看</p>
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt4.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt4.jpg" alt></p>
 <h4><font color="green">//QT程序依赖库</font></h4>
 新建文件夹,名字随便,把qt程序复制过来
 
 <p>运行: linuxdeployqt qtappname -appimage</p>
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt5.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt5.jpg" alt></p>
 <p>出现错误,没有成功打包</p>
 <h4><font color="green">Xxx.AppImage --appimage-extract    //解压一个appimage文件</font></h4>
+appimagetool-x86_64.AppImage 解压后的文件夹 //打包成.AppImage格式运行
 
-<p>appimagetool-x86_64.AppImage 解压后的文件夹 //打包成.AppImage格式运行</p>
 <p>这里我用了appimagetool-x86_64.AppImage,解开这个文件,执行上条命令,得到一个文件夹</p>
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt6.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt6.jpg" alt></p>
 <h4><font color="green">目录结构</font></h4>
 squashfs-root/
 
@@ -339,19 +339,19 @@ squashfs-root/
 <p>​            └── appimagetool.appdata.xml</p>
 <p>11 directories, 27 files</p>
 <h4><font color="green">//修改成我们我自己的程序,然后打包</font></h4>
-![](https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt7.jpg)
+![](https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt7.jpg)
 
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt8.jpg" alt></p>
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt9.jpg" alt></p>
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt10.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt8.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt9.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt10.jpg" alt></p>
 <h4><font color="green">执行命令打包我们的发布程序</font></h4>
+appimagetool-x86_64.AppImage too.AppDir/ test.AppImage
 
-<p>appimagetool-x86_64.AppImage too.AppDir/ test.AppImage</p>
-<p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/blogpic/LinuxQT/lqt11.jpg" alt></p>
+<p><img src="https://infinitelyfreedom.gitee.io/imgs/article/LinuxQTPack/lqt11.jpg" alt></p>
 <p>完成</p>
 <h4><font color="green">发布程序文件夹目录结构</font></h4>
+tree too.AppDir/
 
-<p>tree too.AppDir/</p>
 <p>too.AppDir/</p>
 <p>├── appimagetool.desktop</p>
 <p>├── appimagetool.svg</p>
@@ -742,7 +742,7 @@ squashfs-root/
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/08/15/access注入/">Access注入</a>
+                    <a href="/2019/08/15/access注入/">Access注入笔记</a>
                 </span>
             </li>
             
@@ -754,7 +754,7 @@ squashfs-root/
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/05/24/FirstBlog/">博客入坑记</a>
+                    <a href="/2019/05/24/FirstBlog/">搭建博客踩坑记录</a>
                 </span>
             </li>
             
@@ -776,19 +776,19 @@ squashfs-root/
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/08/15/access注入/">Access注入</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/05/24/FirstBlog/">博客入坑记</a>
+                    <a href="/2019/05/24/FirstBlog/">搭建博客踩坑记录</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2019/07/05/LinuxQT/">Linux QT程序打包</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/08/15/access注入/">Access注入笔记</a>
                 </span>
             </li>
             
@@ -821,11 +821,11 @@ squashfs-root/
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/注入/" style="font-size: 18.044752543326716px;" class="tag-cloud-link">注入</a>
+    <a href="/tags/博客/" style="font-size: 8.443631355898827px;" class="tag-cloud-link">博客</a>
     
-    <a href="/tags/踩坑记/" style="font-size: 9.771656332743273px;" class="tag-cloud-link">踩坑记</a>
+    <a href="/tags/Linux/" style="font-size: 17.871576678394007px;" class="tag-cloud-link">Linux</a>
     
-    <a href="/tags/Linux/" style="font-size: 8.825616453955638px;" class="tag-cloud-link">Linux</a>
+    <a href="/tags/注入/" style="font-size: 19.890380199419255px;" class="tag-cloud-link">注入</a>
     
 </div>
                 

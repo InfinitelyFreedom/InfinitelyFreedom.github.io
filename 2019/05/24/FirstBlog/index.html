@@ -13,7 +13,7 @@
     
     
     
-    <title>博客入坑记 | INF</title>
+    <title>搭建博客踩坑记录 | INF</title>
     <link href="”https://0xfg.top“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -147,15 +147,15 @@
                         
                         
                         <li>
-                            <a href="/categories/Access/">Access</a>
-                        </li>
-                        
-                        <li>
                             <a href="/categories/博客/">博客</a>
                         </li>
                         
                         <li>
                             <a href="/categories/QT/">QT</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/sql注入/">sql注入</a>
                         </li>
                         
                         
@@ -176,15 +176,15 @@
                         
                         
                         <li>
-                            <a href="/tags/注入/">注入</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/踩坑记/">踩坑记</a>
+                            <a href="/tags/博客/">博客</a>
                         </li>
                         
                         <li>
                             <a href="/tags/Linux/">Linux</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/注入/">注入</a>
                         </li>
                         
                         
@@ -216,13 +216,13 @@
         <i class="fa fa-home"></i>
         <a href="https://0xfg.top">INF</a>
         >
-        <span>博客入坑记</span>
+        <span>搭建博客踩坑记录</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2019/05/24/FirstBlog/">博客入坑记</a>
+                <a href="/2019/05/24/FirstBlog/">搭建博客踩坑记录</a>
             </h1>
         </div>
         <div class="tag-article">
@@ -230,7 +230,7 @@
             <span class="label label-gal">
                 <i class="fa fa-tags"></i>
                 
-                <a href="/tags/踩坑记/">踩坑记</a>
+                <a href="/tags/博客/">博客</a>
                 
             </span>
             
@@ -249,7 +249,7 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2019/05/24/FirstBlog/">博客入坑记</a>
+                    <a href="/2019/05/24/FirstBlog/">搭建博客踩坑记录</a>
                 </h4>
             </div>
             <p>
@@ -259,7 +259,7 @@
                 
                 <i class="fa fa-tags"></i>
                 
-                <a href="/tags/踩坑记/">踩坑记</a>
+                <a href="/tags/博客/">博客</a>
                 
                 
                 
@@ -269,11 +269,14 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="博客从入坑到崩溃…中间省略n个…"><a href="#博客从入坑到崩溃…中间省略n个…" class="headerlink" title="博客从入坑到崩溃…中间省略n个…"></a>博客从入坑到崩溃…中间省略n个…</h1><p><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/pic/75.jpg" alt></p>
-<h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><h3 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h3><h4 id="Node-js-选择对应系统下载安装"><a href="#Node-js-选择对应系统下载安装" class="headerlink" title="Node.js: 选择对应系统下载安装"></a>Node.js: 选择对应系统<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载</a>安装</h4><h4 id="Git-选择对应系统下载安装"><a href="#Git-选择对应系统下载安装" class="headerlink" title="Git: 选择对应系统下载安装"></a>Git: 选择对应系统<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载</a>安装</h4><p>安装完成之后就在自己喜欢位置新建一个文件夹作为博客的目录,我这里是myblog<br>win键+r键 运行 cmd 命令, 进到博客文件夹里面运行 npm install hexo-cli -g<br><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/cmd.jpg" alt><br><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/cmd1.jpg" alt><br>完成之后输入git-bash运行git, 在git里面运行<strong>hexo init</strong>初始化Hexo<br>初始化完成后会生成相关文件:<br>    当前目录下的 _config.yml 网站相关配置文件<br>    当前目录下的 themes/主题文件夹/_config.yml 网站主题配置文件<br>打开 cmd 进入你初始化的网站根目录下运行 <strong>hexo server</strong>开启服务<br>浏览器访问网址： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 或者  <a href="http://127.0.0.1:4000/" target="_blank" rel="noopener">http://127.0.0.1:4000/</a><br>本地搭建完成….</p>
+        <h1 id="搭建博客过程的崩溃记录"><a href="#搭建博客过程的崩溃记录" class="headerlink" title="搭建博客过程的崩溃记录"></a>搭建博客过程的崩溃记录</h1><p><img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/bk.jpg" alt></p>
+<h3><font color="blue">你可能会说一个博客搞的花里胡哨的, 没啥用. 当作是自我愉悦吧! 哈哈!</font></h3>
+## 博客搭建
+
+<h3 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h3><h4 id="Node-js-选择对应系统下载安装"><a href="#Node-js-选择对应系统下载安装" class="headerlink" title="Node.js: 选择对应系统下载安装"></a>Node.js: 选择对应系统<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载</a>安装</h4><h4 id="Git-选择对应系统下载安装"><a href="#Git-选择对应系统下载安装" class="headerlink" title="Git: 选择对应系统下载安装"></a>Git: 选择对应系统<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载</a>安装</h4><p>安装完成之后就在自己喜欢位置新建一个文件夹作为博客的目录,我这里是myblog<br>win键+r键 运行 cmd 命令, 进到博客文件夹里面运行 npm install hexo-cli -g<br><img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/cmd.jpg" alt><br><img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/cmd1.jpg" alt><br>完成之后输入git-bash运行git, 在git里面运行<strong>hexo init</strong>初始化Hexo<br>初始化完成后会生成相关文件:<br>    当前目录下的 _config.yml 网站相关配置文件<br>    当前目录下的 themes/主题文件夹/_config.yml 网站主题配置文件<br>打开 cmd 进入你初始化的网站根目录下运行 <strong>hexo server</strong>开启服务<br>浏览器访问网址： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 或者  <a href="http://127.0.0.1:4000/" target="_blank" rel="noopener">http://127.0.0.1:4000/</a><br>本地搭建完成….</p>
 <h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><h3 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h3><p><a href="https://github.com/" target="_blank" rel="noopener">github账号注册</a> 注册时<strong>用户名</strong>要仔细想好, 因为这是影响博客地址的地方, 博客地址一般为: ** https://你的用户名.github.io/ **
-<img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/git.jpg" alt><br>注册完成后新建一个库 库名为:  ** 你的用户名.github.io 注意大小写,最好和用户名一样**
-<img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/git1.jpg" alt><br>cmd 里面执行安装 <strong>npm install hexo-deployer-git –save</strong>,完成后执行** ssh-keygen -t rsa -C “邮箱地址” <strong>生成github的密钥, 然后到</strong> c:\Users\你的电脑用户名.ssh ** 这个目录里面(注意这个目录是隐藏)打开id_rsa.pub 这个文件, 复制里面所有内容到github上面<br><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/git2.jpg" alt><br><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/git3.jpg" alt><br><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/git4.jpg" alt><br>打开网站目录修改 __config.yml配置文件, 找到下面进行修改<br>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:你的Github账号名称/你的Github账号名称.github.io.git<br>  branch: master</p>
+<img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/git.jpg" alt><br>注册完成后新建一个库 库名为:  ** 你的用户名.github.io 注意大小写,最好和用户名一样**
+<img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/git1.jpg" alt><br>cmd 里面执行安装 <strong>npm install hexo-deployer-git –save</strong>,完成后执行** ssh-keygen -t rsa -C “邮箱地址” <strong>生成github的密钥, 然后到</strong> c:\Users\你的电脑用户名.ssh ** 这个目录里面(注意这个目录是隐藏)打开id_rsa.pub 这个文件, 复制里面所有内容到github上面<br><img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/git2.jpg" alt><br><img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/git3.jpg" alt><br><img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/git4.jpg" alt><br>打开网站目录修改 __config.yml配置文件, 找到下面进行修改<br>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:你的Github账号名称/你的Github账号名称.github.io.git<br>  branch: master</p>
 <h3 id="下面开始上传网站到github上面"><a href="#下面开始上传网站到github上面" class="headerlink" title="下面开始上传网站到github上面"></a>下面开始上传网站到github上面</h3><p>** cmd 进入你的博客网站的根目录里面 注意别搞错路径 **</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean		//先清理</span><br></pre></td></tr></table></figure>
 
@@ -283,7 +286,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -d		//上传到你的github仓库上面</span><br></pre></td></tr></table></figure>
 
 <p>浏览器访问网址： https://你的Github账号名称.github.io  访问你的博客</p>
-<h2 id="博客域名"><a href="#博客域名" class="headerlink" title="博客域名"></a>博客域名</h2><p>注册阿里云并购买域名, 完成一系列验证后, 进入域名管理, 选择域名解析, 解析设置<br>添加如下两条解析, 记录值为自己的github.io的地址<br>ping yourgithubname.github.io<br><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/domain1.jpg" alt><br>然后在 你的博客仓库名字.github.io里面的settings(仓库) 里面设置你自己的域名, 保存后会生成一个CNAME文件, 里面保存着你的域名.<br><img src="https://gitee.com/InfinitelyFreedom/InfinitelyFreedom/raw/master/imgs/firstblog/domain2.jpg" alt></p>
+<h2 id="博客域名"><a href="#博客域名" class="headerlink" title="博客域名"></a>博客域名</h2><p>注册阿里云并购买域名, 完成一系列验证后, 进入域名管理, 选择域名解析, 解析设置<br>添加如下两条解析, 记录值为自己的github.io的地址<br>ping yourgithubname.github.io<br><img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/domain1.jpg" alt><br>然后在 你的博客仓库名字.github.io里面的settings(仓库) 里面设置你自己的域名, 保存后会生成一个CNAME文件, 里面保存着你的域名.<br><img src="https://infinitelyfreedom.gitee.io/imgs/article/firstblog/domain2.jpg" alt></p>
 <p>完成后就可以用你自己的域名访问github.io了</p>
 
     </div>
@@ -466,7 +469,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/08/15/access注入/">Access注入</a>
+                    <a href="/2019/08/15/access注入/">Access注入笔记</a>
                 </span>
             </li>
             
@@ -478,7 +481,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/05/24/FirstBlog/">博客入坑记</a>
+                    <a href="/2019/05/24/FirstBlog/">搭建博客踩坑记录</a>
                 </span>
             </li>
             
@@ -500,19 +503,19 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/08/15/access注入/">Access注入</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/05/24/FirstBlog/">博客入坑记</a>
+                    <a href="/2019/05/24/FirstBlog/">搭建博客踩坑记录</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2019/07/05/LinuxQT/">Linux QT程序打包</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/08/15/access注入/">Access注入笔记</a>
                 </span>
             </li>
             
@@ -545,11 +548,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/注入/" style="font-size: 10.656192265122431px;" class="tag-cloud-link">注入</a>
+    <a href="/tags/博客/" style="font-size: 17.55818392459292px;" class="tag-cloud-link">博客</a>
     
-    <a href="/tags/踩坑记/" style="font-size: 19.399708273199387px;" class="tag-cloud-link">踩坑记</a>
+    <a href="/tags/Linux/" style="font-size: 11.346274728114594px;" class="tag-cloud-link">Linux</a>
     
-    <a href="/tags/Linux/" style="font-size: 17.382359895937526px;" class="tag-cloud-link">Linux</a>
+    <a href="/tags/注入/" style="font-size: 10.956901261538775px;" class="tag-cloud-link">注入</a>
     
 </div>
                 
